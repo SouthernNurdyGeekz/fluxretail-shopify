@@ -1,8 +1,44 @@
-﻿<section style="min-height:20vh;display:grid;place-items:center;background:#1a1033;color:#d5d8de;padding:24px;text-align:center">
+﻿<section style="min-height:30vh;display:grid;place-items:center;text-align:center;padding:32px;background:#1a1033;color:#d5d8de">
   <div>
-    <h1 style="margin:0">FluxRetail</h1>
-    <p style="margin:.5rem 0 1rem 0">Multiverse of Retail</p>
-    <a href="/collections/all" style="border:1px solid currentColor;padding:.5rem 1rem;text-decoration:none">Browse</a>
+    <h1 style="margin:0 0 .5rem 0;font-size:42px">FluxRetail</h1>
+    <p style="margin:0 0 1rem 0;font-size:18px">Paste link -> preview -> publish everywhere</p>
+    <a class="btn" href="/collections/all">Browse</a>
   </div>
 </section>
-{% section 'featured-products-grid' %}
+
+<section style="padding:32px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 16px 0">
+    <h2 style="margin:0">Featured</h2>
+    <a class="btn" href="/collections/all">Browse all</a>
+  </div>
+  <div class="grid">
+    {% assign coll = collections['halloween'] %}
+    {% if coll == nil or coll.products_count == 0 %}
+      {% assign coll = collections['all'] %}
+    {% endif %}
+
+    {% if coll and coll.products_count > 0 %}
+      {% for p in coll.products | limit: 12 %}
+        <a href="{{ p.url }}" class="card" style="text-decoration:none;color:inherit">
+          <div class="img">
+            {% if p.featured_image %}
+              <img src="{{ p.featured_image | image_url: width: 400 }}" alt="{{ p.title | escape }}" style="width:100%;height:100%;object-fit:cover" />
+            {% else %}<span style="opacity:.7">No image</span>{% endif %}
+          </div>
+          <div style="margin-top:8px;font-weight:600">{{ p.title }}</div>
+          <div style="opacity:.85">{{ p.price | money }}</div>
+        </a>
+      {% endfor %}
+    {% else %}
+      {% for i in (1..8) %}
+        <div class="card">
+          <div class="img"><span style="opacity:.7">Coming soon</span></div>
+          <div style="margin-top:8px;font-weight:600">Product {{ i }}</div>
+          <div style="opacity:.85">$19.99</div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% section 'footer-basic' %}
