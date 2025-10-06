@@ -1,0 +1,7 @@
+﻿[
+  { "name": "FluxRetail Settings",
+    "settings": [
+      { "type": "color", "id": "background_color", "label": "Background color", "default": "#0b0223" }
+    ]
+  }
+]

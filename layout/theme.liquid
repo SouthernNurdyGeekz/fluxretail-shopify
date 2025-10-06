@@ -1,1 +1,11 @@
-
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8"><title>{{ page_title }}</title>
+  {{ content_for_header }}<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>body{background:#0b0223;color:#cbd5e1;font-family:Arial,system-ui,sans-serif;margin:0}header,footer{padding:16px 24px}h1,h2,h3{color:#e2e8f0}</style>
+</head><body>
+  <header><a href="{{ routes.root_url }}" style="text-decoration:none;color:#cbd5e1;">FluxRetail</a></header>
+  <main role="main">{{ content_for_layout }}</main>
+  <footer>&copy; {{ 'now' | date: '%Y' }} FluxRetail</footer>
+  {{ content_for_footer }}
+</body></html>
