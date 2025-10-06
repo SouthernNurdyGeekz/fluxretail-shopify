@@ -1,0 +1,14 @@
+﻿<section class="fr-product">
+  <h1>{{ product.title }}</h1>
+  {% if product.featured_image %}
+    <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" class="fr-img">
+  {% endif %}
+  <div class="fr-desc">{{ product.description }}</div>
+  {% if product.variants.first %}
+    <p class="fr-price"><strong>{{ product.price | money }}</strong></p>
+    <form action="/cart/add" method="post">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <button type="submit" class="fr-btn">Add to cart</button>
+    </form>
+  {% endif %}
+</section>

@@ -1,1 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page_title }} · FluxRetail</title>
+  {{ content_for_header }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ 'theme.css' | asset_url }}" rel="stylesheet">
+</head>
+<body>
+  <header class="fr-header">
+    <a href="{{ routes.root_url }}" class="fr-brand">
+      <span class="fr-logo">FR</span>
+      <strong>FluxRetail</strong>
+    </a>
+  </header>
 
+  <main role="main" class="fr-main">
+    {{ content_for_layout }}
+  </main>
+
+  <footer class="fr-footer">
+    {% render 'footer' %}
+  </footer>
+
+  {{ content_for_footer }}
+</body>
+</html>
