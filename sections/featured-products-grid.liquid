@@ -1,0 +1,33 @@
+﻿{% comment %}Shows collection "all" or placeholders{% endcomment %}
+{% assign coll = collections['all'] %}
+<section style="padding:32px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 16px 0">
+    <h2 style="margin:0">Featured</h2>
+    <a href="/collections/all" style="text-decoration:none;border:1px solid currentColor;padding:.4rem .8rem">Browse all</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px">
+    {% if coll and coll.products_count > 0 %}
+      {% for p in coll.products | limit: 8 %}
+        <a href="{{ p.url }}" style="text-decoration:none;border:1px solid #3a3455;padding:12px;display:block;background:#1e163a;color:#d5d8de">
+          <div style="aspect-ratio:1/1;background:#2a214d;display:grid;place-items:center;overflow:hidden">
+            {% if p.featured_image %}
+              <img src="{{ p.featured_image | image_url: width: 400 }}" alt="{{ p.title | escape }}" style="width:100%;height:100%;object-fit:cover" />
+            {% else %}
+              <span style="opacity:.7">No image</span>
+            {% endif %}
+          </div>
+          <div style="margin-top:8px;font-weight:600">{{ p.title }}</div>
+          <div style="opacity:.85">{{ p.price | money }}</div>
+        </a>
+      {% endfor %}
+    {% else %}
+      {% for i in (1..8) %}
+        <div style="border:1px solid #3a3455;padding:12px;background:#1e163a;color:#d5d8de">
+          <div style="aspect-ratio:1/1;background:#2a214d;display:grid;place-items:center"><span style="opacity:.7">Coming soon</span></div>
+          <div style="margin-top:8px;font-weight:600">Product {{ i }}</div>
+          <div style="opacity:.85">$19.99</div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>

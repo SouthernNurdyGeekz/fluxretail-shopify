@@ -4,11 +4,11 @@
     "halloween_featured": { "type": "halloween-featured-grid", "settings": {} },
     "hero": { "type": "hero-banner", "settings": {
       "heading": "FluxRetail",
-      "subheading": "Paste link → preview → publish everywhere",
+      "subheading": "Paste link -> preview -> publish everywhere",
       "cta_label": "Browse",
       "cta_url": "/collections/all"
     }},
     "featured": { "type": "featured-products-grid", "settings": {} }
   },
-  "order": ["halloween_landing", "halloween_featured", "hero", "featured"]
+  "order": ["halloween_landing","halloween_featured","hero","featured"]
 }
