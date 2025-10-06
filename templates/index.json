@@ -1,6 +1,14 @@
 ﻿{
   "sections": {
-    "hero": { "type": "hero-banner", "settings": { "heading": "FluxRetail", "subheading": "Multiverse of Retail", "cta_label": "Browse", "cta_url": "/collections/all" } }
+    "halloween_landing": { "type": "halloween-landing", "settings": {} },
+    "halloween_featured": { "type": "halloween-featured-grid", "settings": {} },
+    "hero": { "type": "hero-banner", "settings": {
+      "heading": "FluxRetail",
+      "subheading": "Paste link → preview → publish everywhere",
+      "cta_label": "Browse",
+      "cta_url": "/collections/all"
+    }},
+    "featured": { "type": "featured-products-grid", "settings": {} }
   },
-  "order": ["hero"]
+  "order": ["halloween_landing", "halloween_featured", "hero", "featured"]
 }
