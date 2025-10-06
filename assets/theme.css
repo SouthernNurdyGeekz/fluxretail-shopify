@@ -1,3 +1,13 @@
 ﻿:root{--ink:#d5d8de;--bg:#0d0720;--card:#1e163a;--line:#3a3455}
 *{box-sizing:border-box} body{font-family:system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
 a{color:inherit}
+
+/* Flux quick polish for homepage */
+:root{--ink:#d5d8de;--bg:#0d0720;--card:#1e163a;--line:#3a3455}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,Segoe UI,Arial,sans-serif}
+section .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+a.button, .button{border:1px solid currentColor;padding:.6rem 1rem;text-decoration:none}
+.card{border:1px solid var(--line);background:var(--card);padding:12px}
+.card .img{aspect-ratio:1/1;background:#2a214d;display:grid;place-items:center;overflow:hidden}
+.halloween-hero{min-height:50vh;background:#100a22;color:var(--ink)}
+.halloween-hero .inner{min-height:50vh;display:grid;place-items:center;text-align:center;padding:32px}
