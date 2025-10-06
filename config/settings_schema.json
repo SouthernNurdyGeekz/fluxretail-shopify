@@ -1,10 +1,1 @@
-﻿[
-  {
-    "name": "FluxRetail Settings",
-    "settings": [
-      { "type": "color", "id": "background_color", "label": "Background color", "default": "#0b0223" },
-      { "type": "color", "id": "accent_color",      "label": "Accent color",      "default": "#A7B0C0" },
-      { "type": "image_picker", "id": "logo", "label": "Logo" }
-    ]
-  }
-]
+[]
