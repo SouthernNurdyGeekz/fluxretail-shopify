@@ -1,6 +1,12 @@
 ﻿{
   "sections": {
-    "main": { "type": "index", "settings": {} }
+    "main": {
+      "type": "index",
+      "settings": {
+        "heading": "FluxRetail",
+        "subtext": "Your multiverse of retail starts here."
+      }
+    }
   },
   "order": ["main"]
 }

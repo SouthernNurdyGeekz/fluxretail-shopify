@@ -1,4 +1,16 @@
 ﻿<section class="fr-hero">
-  <h1>Welcome to FluxRetail</h1>
-  <p>Your multiverse of retail starts here.</p>
+  <div class="fr-hero-card">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subtext }}</p>
+  </div>
 </section>
+
+{% schema %}
+{
+  "name": "Hero — FluxRetail",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "FluxRetail" },
+    { "type": "text", "id": "subtext", "label": "Subtext", "default": "Your multiverse of retail starts here." }
+  ]
+}
+{% endschema %}

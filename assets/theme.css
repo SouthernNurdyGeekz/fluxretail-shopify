@@ -4,9 +4,9 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,system-ui,s
 .fr-header{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
 .fr-brand{display:inline-flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none}
 .fr-logo{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:8px;background:linear-gradient(145deg,#333,#777);color:#fff;font-weight:700}
-.fr-main{padding:32px}
-.fr-hero h1,.fr-hero p{margin:0 0 8px;color:var(--hi)}
-.fr-product .fr-img{max-width:100%;height:auto;border-radius:8px}
-.fr-price{margin:12px 0}
-.fr-btn{background:var(--hi);color:#111;padding:10px 16px;border:none;border-radius:8px;cursor:pointer}
-.fr-footer{padding:24px;border-top:1px solid rgba(255,255,255,.08);color:#9aa4b2}
+.fr-main{padding:0}
+.fr-hero{display:grid;place-items:center;min-height:50vh;background:radial-gradient(60% 80% at 50% 20%, rgba(255,255,255,.08), transparent 60%)}
+.fr-hero-card{padding:48px 28px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.05);backdrop-filter:blur(6px);max-width:820px;margin:48px 16px;text-align:center}
+.fr-hero h1{margin:0 0 8px;color:var(--hi);font-size:42px;line-height:1.1}
+.fr-hero p{margin:0;color:var(--fg);opacity:.9;font-size:18px}
+.fr-footer{padding:24px;border-top:1px solid rgba(255,255,255,.08);color:#9aa4b2;text-align:center}
